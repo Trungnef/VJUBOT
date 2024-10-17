@@ -1,0 +1,2 @@
+# VJUBOT
+BOT for VJU
