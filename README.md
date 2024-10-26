@@ -1,23 +1,12 @@
 # VJUBOT Project
 
-This project implements a chatbot using Rasa, RAG (Retrieval Augmented Generation), and a Streamlit frontend.
+A robust, multi-component chatbot application utilizing **Rasa** for intent recognition, **RAG** (Retrieval Augmented Generation) for knowledge retrieval, and **Streamlit** for an interactive frontend interface.
 
 ## Project Structure
- 
-Markdown
-VJUBOT
-├── Rag
-│ ├── ...
-├── Rasa
-│ ├── ...
-├── VJU_chatbot
-│ ├── ...
-└── README.md
 
 * **Rag:** Contains the retrieval augmented generation component.
 * **Rasa:** Houses the Rasa chatbot framework.
 * **VJU_chatbot:** Contains the Streamlit web application for the chatbot interface.
-
 
 ## Setup and Installation
 
@@ -49,9 +38,9 @@ cd ../VJU_chatbot
 pip install -r requirements.txt
 ```
 
-#Running the Project
-##Starting the Services
-#Start all services using Docker Compose:
+# Running the Project
+## Starting the Services
+# Start all services using Docker Compose:
 ```bash
 docker-compose up -d
 ```
@@ -63,18 +52,18 @@ This command will build and start the following services:
 - rasa-actions-server: Rasa actions server for custom actions (port 5055).
 - duckling-server: Duckling server for entity extraction (port 8000).
 
-#Stopping the Services
-##To stop the services:
+# Stopping the Services
+## To stop the services:
 ```bash
 docker-compose down
 ```
 
-#Troubleshooting
-##Port Conflicts: If ports are in use, modify port mappings in the docker-compose.yml file.
-##Dependency Issues: Ensure all dependencies are installed as outlined in each component’s requirements.txt.
-##Docker Issues: Verify Docker is running and you have the necessary permissions.
-#Contributing
+# Troubleshooting
+## Port Conflicts: If ports are in use, modify port mappings in the docker-compose.yml file.
+## Dependency Issues: Ensure all dependencies are installed as outlined in each component’s requirements.txt.
+## Docker Issues: Verify Docker is running and you have the necessary permissions.
+# Contributing
 We welcome contributions! Please open an issue or submit a pull request to contribute to this project.
 
-#License
+# License
 This project is licensed under the MIT License.
