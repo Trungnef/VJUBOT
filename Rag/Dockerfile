@@ -5,8 +5,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN python -m venv .venv
 RUN .venv/bin/pip install -r requirements.txt
-
+RUN pip install uvicorn
 COPY . . 
+
 # Expose port cho FastAPI
 EXPOSE 8002
 
