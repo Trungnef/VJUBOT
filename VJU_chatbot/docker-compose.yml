@@ -1,4 +1,5 @@
 version: "3.9"
+
 services:
   vju_chatbot:
     build: ./VJU_chatbot
@@ -9,15 +10,14 @@ services:
       - rasa-actions-server
       - rag-server
       - duckling-server
-    networks:
-      - all
 
   rag-server:
     build: ./Rag
     ports:
       - "8002:8002"
-    networks:
-      - all
+    volumes:
+      - ./Rag/data_source:/app/data_source
+      - ./Rag/src:/app/src
 
   rasa-server:
     build: 
@@ -30,8 +30,11 @@ services:
       - ./rasa/data:/app/data
     depends_on:
       - duckling-server
-    networks:
-      - all
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5005/version"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   rasa-actions-server:
     build: 
@@ -44,16 +47,8 @@ services:
       - ./rasa/utils:/app/utils
     depends_on:
       - rasa-server
-    networks:
-      - all
 
   duckling-server:
     image: rasa/duckling:latest
     ports:
       - "8000:8000"
-    networks:
-      - all
-
-
-networks:
-  all:
