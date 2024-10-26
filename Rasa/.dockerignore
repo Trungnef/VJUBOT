@@ -1,0 +1,7 @@
+.venv
+__pycache__
+*.pyc
+.DS_Store
+.git
+.idea
+models/*  # Consider only copying the latest model or specific models you need

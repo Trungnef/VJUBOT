@@ -1,57 +1,77 @@
 
 services:
   vju_chatbot:
-    build:
-      context: .
-      dockerfile: ./VJU_chatbot/Dockerfile
+    build: ./VJU_chatbot
     ports:
       - "8501:8501"
+    volumes:
+      - ./VJU_chatbot:/app
+    env_file:
+      - ./VJU_chatbot/.env
     depends_on:
       - rasa-server
       - rasa-actions-server
       - rag-server
       - duckling-server
+    networks:
+      - all
 
   rag-server:
-    build:
-      context: .
-      dockerfile: ./Rag/Dockerfile
+    build: ./Rag
     ports:
       - "8002:8002"
     volumes:
       - ./Rag/data_source:/app/data_source
       - ./Rag/src:/app/src
+    env_file:
+      - ./Rag/.env
+    networks:
+      - all
 
   rasa-server:
-    build:
-      context: .
-      dockerfile: ./Rasa/Dockerfile
+    build: ./Rasa
+    restart: always
     ports:
       - "5005:5005"
     volumes:
-      - ./rasa/actions:/app/actions
-      - ./rasa/data:/app/data
-    depends_on:
-      - duckling-server
+      - ./Rasa/actions:/app/actions
+      - ./Rasa/data:/app/data
+    command: bash -c "rm -rf models/* && rasa train && rasa run --enable-api --cors \"*\" --debug"
+    env_file:
+      - ./Rasa/.env
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5005/version"]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - all
 
   rasa-actions-server:
-    build: 
-      context: .
-      dockerfile: ./Rasa/Dockerfile.actions
+    build: ./Rasa
+    restart: always
     ports:
       - "5055:5055"
     volumes:
-      - ./rasa/actions:/app/actions
-      - ./rasa/utils:/app/utils
+      - ./Rasa/actions:/app/actions
+      - ./Rasa/utils:/app/utils
+    command: ["rasa", "run", "actions"]
+    env_file:
+      - ./Rasa/.env  
     depends_on:
       - rasa-server
+    networks:
+      - all
 
   duckling-server:
     image: rasa/duckling:latest
     ports:
       - "8000:8000"
+    networks:
+      - all
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"
