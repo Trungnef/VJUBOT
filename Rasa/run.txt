@@ -1,0 +1,6 @@
+#rasa data
+rasa run --enable-api --cors "*"
+#rasa action
+rasa run actions
+#duckling
+docker run -p 8000:8000 rasa/duckling 

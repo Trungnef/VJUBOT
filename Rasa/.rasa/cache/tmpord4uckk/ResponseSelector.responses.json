@@ -1,0 +1,78 @@
+{
+  "utter_chitchat/mood_unhappy": [
+    {
+      "text": "Đừng buồn mà :((",
+      "image": "https://i.imgur.com/nGF1K8f.jpg"
+    }
+  ],
+  "utter_chitchat/mood_great": [
+    {
+      "text": "Great, carry on!"
+    }
+  ],
+  "utter_chitchat/bot_challenge": [
+    {
+      "text": "I am a bot, powered by VJU."
+    }
+  ],
+  "utter_faq/ask_about_vju": [
+    {
+      "text": "Trường Đại học Việt Nhật (VJU) là một cơ sở giáo dục công lập quốc tế được thành lập hợp tác giữa Chính phủ Việt Nam và Nhật Bản. VJU cung cấp các chương trình đào tạo chất lượng cao với tiêu chuẩn quốc tế trong nhiều lĩnh vực khác nhau, bao gồm khoa học, công nghệ, kỹ thuật, quản trị kinh doanh, và ngôn ngữ. Trường cam kết mang lại môi trường học tập thân thiện, đa văn hóa và hỗ trợ sinh viên phát triển toàn diện."
+    }
+  ],
+  "utter_faq/ask_about_admission": [
+    {
+      "text": "Thông tin tuyển sinh của VJU có thể được tìm thấy trên trang web chính thức của trường tại địa chỉ [https://vju.ac.vn/tuyensinhdaihoc/thong-tin-tuyen-sinh/]. Để biết thêm chi tiết về quy trình đăng ký, yêu cầu hồ sơ, và thời gian nộp hồ sơ, bạn có thể liên hệ với phòng tuyển sinh qua số điện thoại [0373104304] hoặc email [vju@vnu.edu.vn]. Nhân viên của chúng tôi sẽ hỗ trợ bạn tận tình trong quá trình đăng ký."
+    }
+  ],
+  "utter_faq/ask_help": [
+    {
+      "text": "Nếu bạn cần thêm thông tin hoặc sự trợ giúp, hãy liên hệ với chúng tôi qua email [vju@vnu.edu.vn] hoặc gọi số điện thoại [0373104304]. Chúng tôi luôn sẵn sàng hỗ trợ bạn về bất kỳ câu hỏi nào liên quan đến VJU, từ việc tìm hiểu về chương trình học đến các vấn đề liên quan đến cuộc sống sinh viên."
+    }
+  ],
+  "utter_faq/ask_location": [
+    {
+      "text": "Trường Đại học Việt Nhật (VJU) có vị trí thuận lợi tại địa chỉ phố Lưu Hữu Phước, Mỹ Đình 2, Nam Từ Liêm, Hà Nội, Việt Nam. Bên cạnh đó, VJU còn có cơ sở 2 nằm tại Khu Đô thị Đại Học Quốc Gia, Hòa Lạc, Thạch Thất, Hà Nội. Địa điểm này không chỉ dễ dàng tiếp cận mà còn được bao quanh bởi nhiều tiện ích phục vụ sinh viên."
+    }
+  ],
+  "utter_faq/ask_hours": [
+    {
+      "text": "Văn phòng tuyển sinh của VJU hoạt động từ thứ Hai đến thứ Sáu, từ 8:00 sáng đến 5:00 chiều. Trong các ngày cuối tuần và ngày lễ, văn phòng sẽ không làm việc. Bạn có thể đến trực tiếp hoặc liên hệ qua điện thoại trong giờ làm việc để được hỗ trợ."
+    }
+  ],
+  "utter_faq/ask_about_scholarships": [
+    {
+      "text": "Trường Đại học Việt Nhật cung cấp nhiều loại học bổng cho sinh viên dựa trên thành tích học tập và nhu cầu tài chính. Bạn có thể tìm hiểu thêm về các chương trình học bổng, tiêu chí xét tuyển và cách đăng ký trên trang web chính thức của trường. Nếu bạn có thắc mắc về học bổng, hãy liên hệ với phòng tuyển sinh để được tư vấn chi tiết."
+    }
+  ],
+  "utter_faq/ask_about_facilities": [
+    {
+      "text": "VJU tự hào có các cơ sở vật chất hiện đại, bao gồm phòng thí nghiệm được trang bị đầy đủ, thư viện phong phú với nhiều tài liệu học tập và nghiên cứu, cùng các tiện ích học tập khác như phòng học đa phương tiện. Sinh viên có thể sử dụng các cơ sở này để hỗ trợ việc học tập và nghiên cứu hiệu quả."
+    }
+  ],
+  "utter_faq/ask_about_library": [
+    {
+      "text": "Thư viện của VJU nằm ngay trong khuôn viên trường và mở cửa từ thứ Hai đến thứ Sáu, từ 8:00 sáng đến 8:00 tối. Thư viện cung cấp nhiều tài liệu học tập, sách tham khảo, và không gian nghiên cứu thoải mái cho sinh viên. Các dịch vụ hỗ trợ nghiên cứu và học tập cũng được cung cấp để đảm bảo sinh viên có thể tiếp cận thông tin dễ dàng."
+    }
+  ],
+  "utter_faq/ask_about_housing": [
+    {
+      "text": "VJU cung cấp ký túc xá cho sinh viên với các điều kiện tiện nghi và an toàn, bao gồm các phòng ở đầy đủ nội thất, khu sinh hoạt chung, và dịch vụ bảo vệ 24/24. Bạn có thể đăng ký chỗ ở tại ký túc xá thông qua trang web của trường hoặc liên hệ với phòng quản lý ký túc xá để biết thêm thông tin chi tiết."
+    }
+  ],
+  "utter_faq/ask_about_transportation": [
+    {
+      "text": "VJU nằm gần các tuyến giao thông công cộng chính, bao gồm xe buýt và taxi. Trường cũng cung cấp dịch vụ xe đưa đón cho sinh viên để đảm bảo việc đi lại thuận tiện. Ngoài ra, khu vực đậu xe rộng rãi cũng được bố trí cho sinh viên sử dụng phương tiện cá nhân."
+    }
+  ],
+  "utter_faq/ask_about_events": [
+    {
+      "text": "Trường Đại học Việt Nhật tổ chức nhiều sự kiện trong năm, bao gồm các hội thảo học thuật, hội nghị quốc tế, và hoạt động văn hóa cho sinh viên. Thông tin chi tiết về các sự kiện sắp diễn ra, cùng với lịch trình cụ thể, có thể được tìm thấy trên trang web của trường."
+    }
+  ],
+  "utter_faq/ask_about_security": [
+    {
+      "text": "VJU có hệ thống an ninh hiện đại nhằm đảm bảo an toàn cho sinh viên và cán bộ. Trường cũng có đội ngũ bảo vệ túc trực trong khuôn viên trường để giám sát và đảm bảo an toàn cho mọi hoạt động diễn ra. Sinh viên có thể yên tâm khi học tập và sinh hoạt tại trường."
+    }
+  ]
+}

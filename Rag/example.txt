@@ -1,0 +1,3 @@
+uvicorn main:app --reload --host 127.0.0.1 --port 5000
+
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;

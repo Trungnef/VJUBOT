@@ -1,0 +1,8 @@
+FROM rasa/rasa-sdk:latest
+
+WORKDIR /app
+
+COPY actions/ /app/actions
+COPY utils/ /app/utils
+
+CMD ["rasa", "run", "actions", "-p", "5055"]

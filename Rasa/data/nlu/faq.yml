@@ -1,0 +1,90 @@
+version: "3.1"
+
+nlu:
+  - intent: faq/ask_about_vju
+    examples: |
+      - Trường đại học Việt Nhật là gì?
+      - VJU viết tắt của gì?
+      - What does VJU stand for?
+      - VJU?
+      - Bạn có thể giới thiệu về VJU?
+
+  - intent: faq/ask_about_admission
+    examples: |
+      - Quy trình tuyển sinh của VJU là gì?
+      - Tuyển sinh VJU?
+      - VJU có những phương thức tuyển sinh nào?
+
+  - intent: faq/ask_help
+    examples: |
+      - Tôi cần được hỗ trợ
+      - Có thể giúp tôi không?
+      - Bạn có thể giúp tôi được không?
+      - Làm sao để nhận được sự hỗ trợ từ VJU?
+      - Hướng dẫn tôi với
+      - How can I get support?
+      - Can someone assist me?
+
+  - intent: faq/ask_location
+    examples: |
+      - VJU nằm ở đâu vậy?
+      - Vị trí của trường đại học Việt Nhật?
+      - Trường này ở đâu?
+      - Có bao nhiêu cơ sở của VJU?
+      - Các cơ sở của trường VJU nằm ở địa chỉ nào?
+
+  - intent: faq/ask_hours
+    examples: |
+      - Giờ mở cửa của văn phòng tuyển sinh là khi nào?
+      - Trường làm việc vào giờ nào?
+      - Thời gian hoạt động của VJU là khi nào?
+      - VJU có làm việc vào cuối tuần không?
+
+  - intent: faq/ask_about_scholarships
+    examples: |
+      - Có những loại học bổng nào tại VJU?
+      - Làm sao để đủ điều kiện nhận học bổng tại VJU?
+      - VJU trao học bổng cho sinh viên thế nào?
+      - Điều kiện cần có để nhận học bổng tại VJU là gì?
+
+  - intent: faq/ask_about_facilities
+    examples: |
+      - VJU có phòng lab không?
+      - Những tiện nghi nào có sẵn cho sinh viên tại VJU?
+      - Các cơ sở vật chất tại VJU như thế nào?
+      - Trường có ký túc xá không?
+      - VJU có những dịch vụ gì cho sinh viên?
+
+  - intent: faq/ask_about_library
+    examples: |
+      - Giờ mở cửa của thư viện là khi nào?
+      - Làm sao để mượn sách tại thư viện VJU?
+      - Thư viện VJU có những tài liệu gì?
+      - Có thể sử dụng thư viện ở VJU không?
+
+  - intent: faq/ask_about_housing
+    examples: |
+      - VJU có ký túc xá cho sinh viên không?
+      - Ký túc xá?
+      - Tôi có thể ở đâu khi học tại VJU?
+
+  - intent: faq/ask_about_transportation
+    examples: |
+      - Có phương tiện giao thông công cộng đến VJU không?
+      - Làm sao để đến VJU bằng xe buýt?
+      - Tôi có thể đỗ xe ở đâu tại VJU?
+      - Trường có bãi đậu xe không?
+
+  - intent: faq/ask_about_events
+    examples: |
+      - VJU có tổ chức sự kiện gì không?
+      - Sự kiện sắp tới tại VJU là gì?
+      - Trường có các hội thảo hay buổi nói chuyện nào không?
+      - Lịch sự kiện của VJU ra sao?
+
+  - intent: faq/ask_about_security
+    examples: |
+      - An ninh tại trường có tốt không?
+      - VJU có hệ thống bảo mật không?
+      - Trường có hệ thống giám sát an ninh không?
+      - VJU có bảo vệ không?

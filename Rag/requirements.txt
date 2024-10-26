@@ -1,0 +1,36 @@
+#rag
+# ctransformers
+transformers
+langchain
+langchain-community
+torch
+pypdf
+sentence-transformers
+faiss-cpu
+openai
+fastapi
+uvicorn
+nltk
+PyMuPDF
+# underthesea
+langchain-huggingface
+wget
+langchain_chroma
+# python-multipart
+bitsandbytes
+# bitsandbytes-cuda12
+python-dotenv
+tqdm
+pydantic
+langserve
+accelerate
+tiktoken
+blobfile
+sentencepiece
+
+#pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
+sse_starlette
+python-multipart
+rapidocr-onnxruntime
+cohere
+lru-cache

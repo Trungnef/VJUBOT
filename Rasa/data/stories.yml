@@ -1,0 +1,28 @@
+version: "3.1"
+
+stories:
+  - story: chitchat
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: chitchat
+      - action: utter_chitchat
+
+  - story: faq
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: faq
+      - action: utter_faq
+
+  - story: contact us form
+    steps:
+      - intent: contact_us
+      - action: contact_us_form
+      - active_loop: contact_us_form
+
+  - story: registration form
+    steps:
+      - intent: register_course
+      - action: registration_form  
+      - active_loop: registration_form

@@ -1,0 +1,82 @@
+version: "3.1"
+
+rules:
+  - rule: Hi greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: faq
+    steps:
+      - intent: faq
+      - action: utter_faq
+
+  - rule: chitchat
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+  
+  - rule: Handle chitchat
+    steps:
+      - intent: chitchat
+      - action: utter_chitchat
+
+  - rule: Handle faq
+    steps:
+      - intent: faq
+      - action: utter_faq
+
+  - rule: nlu fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_outofscope
+
+  - rule: Activate, registration form
+    condition:
+    - active_loop: null
+    steps:
+    - intent: register_course
+    - action: registration_form
+    - active_loop: registration_form
+
+  - rule: Deactivate, registration form
+    condition:
+    - active_loop: registration_form
+    steps:
+    - action: registration_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_submit_registration_form
+  
+  - rule: Return to main flow
+    steps:
+    - intent: cancel
+    - action: utter_return_to_main
+
+#Contact form
+
+  - rule: Activate contact us form
+    condition:
+    - active_loop: null
+    steps:
+    - intent: contact_us
+    - action: contact_us_form
+    - active_loop: contact_us_form
+
+  - rule: Deactivate contact us form
+    condition:
+    - active_loop: contact_us_form
+    steps:
+    - action: contact_us_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_submit_contact_us_form
+
+ 

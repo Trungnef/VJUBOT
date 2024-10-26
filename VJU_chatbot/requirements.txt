@@ -1,0 +1,10 @@
+#streamlit
+streamlit
+streamlit_option_menu
+streamlit_chat
+pandas
+requests
+google.generativeai
+requests_toolbelt
+python-dotenv
+pyjwt

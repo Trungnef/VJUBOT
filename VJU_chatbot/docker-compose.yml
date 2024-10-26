@@ -1,0 +1,59 @@
+version: "3.9"
+services:
+  vju_chatbot:
+    build: ./VJU_chatbot
+    ports:
+      - "8501:8501"
+    depends_on:
+      - rasa-server
+      - rasa-actions-server
+      - rag-server
+      - duckling-server
+    networks:
+      - all
+
+  rag-server:
+    build: ./Rag
+    ports:
+      - "8002:8002"
+    networks:
+      - all
+
+  rasa-server:
+    build: 
+      context: ./rasa
+      dockerfile: Dockerfile
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./rasa/actions:/app/actions
+      - ./rasa/data:/app/data
+    depends_on:
+      - duckling-server
+    networks:
+      - all
+
+  rasa-actions-server:
+    build: 
+      context: ./rasa
+      dockerfile: Dockerfile.actions
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./rasa/actions:/app/actions
+      - ./rasa/utils:/app/utils
+    depends_on:
+      - rasa-server
+    networks:
+      - all
+
+  duckling-server:
+    image: rasa/duckling:latest
+    ports:
+      - "8000:8000"
+    networks:
+      - all
+
+
+networks:
+  all:

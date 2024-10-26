@@ -1,0 +1,235 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - xin chào
+      - chào bạn
+      - hi
+      - hello
+      - chào vju
+      - vjubot
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - hẹn gặp lại
+      - tạm biệt
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - có
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - không
+      
+  - intent: anything
+    examples: |
+      - Anything
+      - Whatever
+ 
+  - intent: contact_us
+    examples: |
+      - Liên lạc
+      - Thông tin liên hệ
+      - Làm sao để liên hệ với VJU?
+      - Contact information
+      - How can I contact VJU?
+      - How do I reach VJU?
+      - Provide support 
+      - Support
+
+  - intent: register_course
+    examples: |
+      - I want to register for a course
+      - I need to enroll in a course
+      - Register me for a class
+      - I'd like to sign up for a course
+      - Can you help me register for a course?
+      - Tôi muốn đăng ký một khóa học
+      - Tôi cần đăng phần ký môn học
+      - Đăng ký cho tôi một lớp học
+      - Tôi muốn đăng ký khóa học
+      - Bạn có thể giúp tôi đăng ký môn học không?
+      - Đăng ký học
+      - Đăng ký
+      - Đăng ký tín chỉ
+
+  - intent: provide_student_id
+    examples: |
+      - My student ID is [12345678](student_id)
+      - Here's my student ID: [21110108](student_id)
+      - [21110108](student_id)
+      - [12345532](student_id)
+      - Mã sinh viên của tôi là [21110108](student_id)
+      - Đây là mã sinh viên của tôi: [21110108](student_id)
+      - [20190001](student_id)
+      - [20200002](student_id)
+      - [21110110](student_id)
+      - [21110111](student_id)
+  - regex: student_id
+    examples: |
+      - \d{8}
+
+  - intent: provide_subject_id
+    examples: |
+      - The course ID is [CS1011](subject_id)
+      - I'd like to register for course [MAT2002](subject_id)
+      - Please register me for [PH3002](subject_id)
+      - [EN1501](subject_id)
+      - Mã môn học là [IT2001](subject_id)
+      - Tôi muốn đăng ký môn [CE1015](subject_id)
+      - Vui lòng đăng ký cho tôi môn [BI2022](subject_id)
+      - [HI3000](subject_id)
+      - [BU1011](subject_id)
+      - [IT2002](subject_id)
+  - regex: subject_id
+    examples: |
+      - [A-Z]{2}\d{4}
+
+  - intent: provide_class_id
+    examples: |
+      - The class ID is [EH01](class_id)
+      - I'd like to join class [IT22](class_id)
+      - Register me for class [IT33](class_id)
+      - [MA44](class_id)
+      - Mã lớp là [IT55](class_id)
+      - Tôi muốn tham gia lớp [AI66](class_id)
+      - Vui lòng đăng ký cho tôi lớp [VN77](class_id)
+      - [IT08](class_id)
+      - [IO09](class_id)
+      - [IT11](class_id)
+  - regex: class_id
+    examples: |
+      - [A-Z]{2}\d{2}
+
+  - intent: provide_name
+    examples: |
+      - [Bob](name) is my name
+      - Tên của tôi là [Nguyễn Văn A](name)
+      - Tôi là [Lê Thị B](name)
+      - Bạn có thể gọi tôi là [Trung](name)
+      - [Hà](name) là tên của tôi
+      - [Trung](name)
+      - [Bui Trung](name)
+      - [Bui The Trung](name)
+      - [Bùi Thế Trung](name)
+      - [Vũ Thị Lan Hương](name)
+      - Alex (name)
+  - regex: name
+    examples: |
+      - [A-Za-z]+
+      - [A-Za-z\s]+
+      - John Doe
+      - Nguyễn Văn A C
+      - Bùi Thế Trung
+
+  - intent: provide_phone_number
+    examples: |
+      - [9876543210](phone_number)
+      - [0345678901](phone_number)
+      - [0373104304](phone_number)
+      - [1234567890](phone_number)
+      - Số điện thoại của tôi [0373104304](phone_number)
+  - regex: phone_number
+    examples: |
+      - \d{10}
+      - \d{3}[-]\d{3}[-]\d{4}
+      - \+?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,9}
+
+  - intent: provide_email
+    examples: |
+      - My email is [john.doe@example.com](email)
+      - Contact me at [jane.smith@example.org](email)
+      - You can email me at [alice123@example.net](email)
+      - [bob@example.com](email)
+      - Email của tôi là [nguyen.vana@gmail.com](email)
+      - Đây là email của tôi: [le.thi.b@example.com](email)
+      - Hãy gửi email cho tôi tại [trung@example.vn](email)
+      - [ha@example.com](email)
+  - regex: email
+    examples: |
+      - \S+@\S+\.\S+
+      - example@example.com
+      - user.name@domain.co
+      - user@gmail.com
+
+  - intent: provide_messages
+    examples: |
+      - My messages is [I need help with my course registration](messages)
+      - My messages is [Tôi muốn nhận được sự hỗ trợ](messages)
+      - My messages is [Tôi muốn hẹn gặp để trao đổi được không?](messages)
+      - My messages is [Tôi gặp vấn đề về Kỹ thuật, hãy liên hệ lại với tôi!](messages)
+      - My messages is [Hãy liên lạc lại với tôi](messages)
+      - Hãy liên hệ với tôi về [đăng ký khóa học](messages)
+      - [Cần thông tin thêm về khóa học](messages)
+      - [Tôi muốn tìm hiểu rõ hơn về cách thức đăng kí!](messages)
+      - [Tôi có thể hẹn gặp trao đổi trực tiếp được không?](messages)
+      - [Mãi mãi là bao lâu](messages)
+      - [Tôi muốn trợ giúp về kỹ thuật](messages)
+      - [Tôi có thắc mắc về kỹ thuật](messages)
+      - [Tôi gặp vấn đề về Kỹ thuật, hãy liên hệ lại với tôi!](messages)
+      
+  - regex: messages
+    examples: |
+      - .{1,500}
+
+
+  - intent: cancel
+    examples: |
+      - Hủy bỏ
+      - Thôi, tôi không muốn đăng ký nữa
+      - Tôi muốn thoát
+      - Hủy đăng ký
+      - Kết thúc quá trình này
+      - Hủy
+      - cancel
+      - Thoát
+      - exit
+      - Out
+
+  - intent: outofscope
+    examples: |
+      - Tôi muốn mua vé máy bay
+      - Thời tiết hôm nay thế nào?
+      - Bạn có biết món ăn gì ngon không?
+      - Kể cho tôi một câu chuyện
+      - Tôi muốn xem phim gì đó
+      - Điều kiện để được tuyển thẳng VJU
+      - hành vi gian lận trong quá trình dự tuyển, dự thi để được trúng tuyển?

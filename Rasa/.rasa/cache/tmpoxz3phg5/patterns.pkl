@@ -1,0 +1,66 @@
+[
+  {
+    "name": "class_id",
+    "pattern": "[A-Z]{2}\\d{2}"
+  },
+  {
+    "name": "email",
+    "pattern": "\\S+@\\S+\\.\\S+"
+  },
+  {
+    "name": "email",
+    "pattern": "example@example.com"
+  },
+  {
+    "name": "email",
+    "pattern": "user.name@domain.co"
+  },
+  {
+    "name": "email",
+    "pattern": "user@gmail.com"
+  },
+  {
+    "name": "messages",
+    "pattern": ".{1,500}"
+  },
+  {
+    "name": "name",
+    "pattern": "Bùi Thế Trung"
+  },
+  {
+    "name": "name",
+    "pattern": "John Doe"
+  },
+  {
+    "name": "name",
+    "pattern": "Nguyễn Văn A C"
+  },
+  {
+    "name": "name",
+    "pattern": "[A-Za-z\\s]+"
+  },
+  {
+    "name": "name",
+    "pattern": "[A-Za-z]+"
+  },
+  {
+    "name": "phone_number",
+    "pattern": "\\+?\\d{1,4}[-\\s]?\\d{1,4}[-\\s]?\\d{1,4}[-\\s]?\\d{1,9}"
+  },
+  {
+    "name": "phone_number",
+    "pattern": "\\d{10}"
+  },
+  {
+    "name": "phone_number",
+    "pattern": "\\d{3}[-]\\d{3}[-]\\d{4}"
+  },
+  {
+    "name": "student_id",
+    "pattern": "\\d{8}"
+  },
+  {
+    "name": "subject_id",
+    "pattern": "[A-Z]{2}\\d{4}"
+  }
+]
