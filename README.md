@@ -38,6 +38,16 @@ cd ../VJU_chatbot
 pip install -r requirements.txt
 ```
 
+Remember when you want to test local make sure you have change this:
+Rasa/endpoints.yml: (uncomment and use localhost)
+```bash
+# action_endpoint:
+#  url: "http://localhost:5055/webhook"
+
+action_endpoint:
+  url: "http://rasa-actions-server/webhook"
+```
+  
 ## Running the Project
 ### Starting the Services
 - Start all services using Docker Compose:
