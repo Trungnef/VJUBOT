@@ -1,4 +1,3 @@
-
 services:
   vju_chatbot:
     build: ./VJU_chatbot
@@ -25,6 +24,11 @@ services:
       - ./Rag/src:/app/src
     env_file:
       - ./Rag/.env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - all
 
