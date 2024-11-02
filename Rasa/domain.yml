@@ -110,7 +110,7 @@ responses:
     - text: "Bạn có thể cho tôi số điện thoại để chúng tôi liên hệ không?"
 
   utter_ask_messages:
-    - text: "Bạn muốn gửi thông điệp gì đến chúng tôi? hãy theo định dạng (My messages is [...])"
+    - text: "Bạn muốn gửi thông điệp gì đến chúng tôi?"
 
   utter_ask_confirm_details:
   - buttons:
